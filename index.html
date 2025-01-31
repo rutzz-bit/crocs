@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Pop Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>K-Pop Facts</h1>
+        <p id="factDisplay">Click the button to see a random fact!</p>
+        <button id="factButton">Show Random Fact</button>
+    </div>
+    <script>
+        const facts = [
+            "K-pop has gained immense popularity worldwide, with groups like BTS and BLACKPINK breaking records on international music charts and social media platforms.",
+            "K-pop idols often undergo rigorous training for several years before debuting. Trainees typically receive vocal, dance, and language lessons, along with media training.",
+            "K-pop fandoms are known for their passionate and organized fan activities. Fans often engage in streaming parties, fan chants, and even charity events in the name of their favorite groups.",
+            "K-pop groups often have distinct concepts and visuals for each album or comeback. This includes themed music videos, fashion styles, and choreography that align with the concept.",
+            "While K-pop is often associated with pop music, it incorporates a wide range of genres, including hip-hop, R&B, rock, and electronic music.",
+            "The K-pop industry generates significant revenue through merchandise sales, including albums, clothing, light sticks, and other fan-related products.",
+            "K-pop artists actively engage with fans through social media platforms like Twitter, Instagram, and TikTok, which helps them maintain a strong global presence.",
+            "K-pop groups frequently break records for album sales, YouTube views, and concert attendance, showcasing their growing influence in the music industry.",
+            "K-pop has played a significant role in promoting Korean culture globally, leading to increased interest in Korean language, fashion, and cuisine.",
+            "The K-pop industry has seen an increase in diversity, with idols from various countries and backgrounds debuting in Korean groups, reflecting a more globalized music scene."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
